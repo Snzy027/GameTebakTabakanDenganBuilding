@@ -1,0 +1,220 @@
+:root {
+  --themeYellow: #ffbf34;
+  --themeMint: #b5efb2;
+  --themeGreen: #088552;
+  --themeSalmon: #ed7676;
+  --themeGray0: #434755;
+  --themeGray1: #8d929e;
+  --themeGray2: #e3e3e3;
+  --themeGray3: #f0f0f0;
+}
+
+/* @font-face {
+    font-family: 'agent-orange.regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('agent-orange.regular'), url('fonts/agent-orange_woff/agent-orange.regular.woff') format('woff');
+} */
+@font-face {
+	font-family: 'LCD Solid';
+	src: url('fonts/lcd/LCDSolid.woff2') format('woff2'),
+			url('fonts/lcd/LCDSolid.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+body{
+	/* font-family:'agent-orange.regular'; */
+  font-family: 'LCD Solid';
+	font-weight:normal;
+	font-size:30px;
+	text-align: center;
+	/* background-color: white; */
+	background-color: rgb(41, 41, 41);
+	/* background-image: url(images/newBackground.webp); */
+  background-image: url(images/patternBackground.png);
+	background-size: 350px;
+	margin: 0px;
+	background-attachment: fixed;
+}
+
+
+input[type=text], select {
+  /* background-color: var(--themeGray3); */
+  font-family: 'LCD Solid';
+  font-size: 14px;
+  padding: 12px 20px;
+  margin: 8px 0;
+  /* border: 1px solid #ccc; */
+  /* border-radius: 4px; */
+  box-sizing: border-box;
+	width: 45%
+}
+
+
+
+button{
+	width: 100%;
+  background-color: var(--themeYellow);
+  color: themeGray0;
+  padding: 14px 20px;
+  margin: 8px 0;
+  /* border-radius: 4px; */
+  cursor: pointer;
+	/* font-family:'agent-orange.regular'; */
+  font-family: 'LCD Solid';
+	font-weight: normal;
+	font-size: 18px;
+	text-align: center;
+	/* border: 2px solid #4CAF50; */
+  border: 0px;
+}
+button {
+  transition-duration: 0.4s;
+}
+
+button:hover {
+  /* background-color: #4CAF50; /* Green */
+  background-color: var(--themeGreen);
+  color: var(--themeGray3);
+}
+
+#formContainer {
+	margin:auto;
+	max-width:500px;
+  /* border-radius: 5px; */
+  background-color: var(--themeGray2);
+  padding: 20px;
+}
+
+path {
+  fill: transparent;
+}
+#about{
+	position: relative;  
+  z-index: 20;
+	margin: auto;
+  margin-top: -60px;
+  margin-bottom: 20px;
+	text-align: center;
+  font-family: 'LCD Solid';
+	/*opacity: .9;*/
+	max-width: 400px;
+	text-decoration: none;
+	display: block;
+	transition: all 0.3s ease;
+}
+#about:hover {
+  transform: scale(1.1);
+}
+
+#bodyFlexContiner {
+	display: flex;
+	justify-content: center;
+}
+#leftContainer {
+    width: 38%;
+}
+#centerConatiner {
+    width: 40%;
+		min-width: 540px;
+		margin: auto;
+}
+#rightContiner {
+    width: 30%;
+		margin-left: 4%;
+    margin-right: 4%;
+}
+.date{
+	color:var(--themeGray0);
+}
+.newsText{
+	text-align: left;
+}
+@media screen and (max-width: 1000px) {
+	#bodyFlexContiner {
+		display: initial;
+		width: 100%;
+	}
+	#rightContiner {
+    width: unset;
+		min-width: unset;
+		margin:auto;
+	}
+	#centerConatiner {
+    width: unset;
+		min-width: unset;
+		margin: auto;
+}
+}
+
+@media screen and (max-width: 600px) {
+  body {
+    font-size: 4vw;
+		background-size: 200px;
+  }
+  #about {
+		font-size: 4vw;
+    width: 75%;
+  }
+	button {
+		font-size:3vw;
+	}
+	
+	
+}
+#small, .aboutTheGame  {
+	overflow: hidden;
+	/* font-family: Arial, Helvetica, sans-serif; */
+  font-family: 'LCD Solid';
+	margin:auto;
+	margin-top: 1em;
+	max-width:500px;
+  /* border-radius: 5px; */
+  background-color: var(--themeGray2);
+  padding: 20px;
+	font-size: 14px;
+}
+#small{
+	margin-bottom: 1rem;
+}
+/* new stuff */
+.blockMainHeader {
+  background-color: var(--themeGray0);
+  top: 0px;
+  padding: 40px;
+  z-index: 10;
+  position: relative;
+}
+
+.blockHeader {
+  background-color: var(--themeGray0);
+  color: white;
+  /* padding: 12px; */
+  position: relative;
+  margin: -20px;
+  margin-bottom: 20px;
+}
+
+.blockFooter {
+  background-color: var(--themeGray0);
+  color: white;
+  /* padding: 12px; */
+  position: relative;
+  margin: -20px;
+  margin-top: 20px;
+}
+
+.blockBody {
+  position: relative;
+  background-color: var(--themeGray0);
+  color: white;
+  padding: 2px;
+  margin: -20px;
+  margin-bottom: 40px;
+}
+
+label {
+	transform: translateY(20%);
+	display: inline-block;
+}

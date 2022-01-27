@@ -1,0 +1,747 @@
+:root {
+  --themeYellow: #ffbf34;
+  --themeMint: #b5efb2;
+  --themeGreen: #088552;
+  --themeSalmon: #ed7676;
+  --themeGray0: #434755;
+  --themeGray1: #8d929e;
+  --themeGray2: #e3e3e3;
+  --themeGray4: #f0f0f0;
+  --themeRed: #FF5E5E;
+}
+
+body {
+	margin: 0;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+/* @font-face {
+	font-family: 'agent-orange.regular';
+	font-style: normal;
+	font-weight: normal;
+	src: local('agent-orange.regular'), url('agent-orange_woff/agent-orange.regular.woff') format('woff');
+} */
+@font-face {
+	font-family: 'LCD Solid';
+	src: url('fonts/lcd/LCDSolid.woff2') format('woff2'),
+			url('fonts/lcd/LCDSolid.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+/* Hide scrollbar for Chrome, Safari and Opera */
+body::-webkit-scrollbar {
+	display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+body {
+	-ms-overflow-style: none;
+	/* IE and Edge */
+	scrollbar-width: none;
+	/* Firefox */
+}
+
+/* its my birthday party, I get to pick the movie */
+body{
+	margin:0px;
+	--baseBlack: 25;
+	background-color: rgb(var(--baseBlack), var(--baseBlack), calc(var(--baseBlack)*1.4));
+	/* background-image: url(../../images/patternBackground.png); */
+  /* background: white; */
+	background-size: 170px;
+	font-family: 'LCD Solid';
+}
+
+#form {
+	position: absolute;
+	/* background: rgba(0, 0, 0, 0.15); */
+  background: var(--themeGray0);
+	padding: 0.35rem;
+	/* bottom: 0; */
+	left: 0;
+	right: 0;
+	display: flex;
+	height: 3rem;
+	box-sizing: border-box;
+	backdrop-filter: blur(10px);
+}
+
+
+#input {
+  font-family: 'LCD Solid';
+	border: none;
+	padding: 0 1rem;
+	flex-grow: 1;
+	/* border-radius: 2rem; */
+	margin: 0.25rem;
+	width:80%;
+}
+
+#adminControls:input {
+  font-family: 'LCD Solid';
+}
+
+#input:focus {
+	outline: none;
+}
+
+#form > button {
+	background: var(--themeYellow);
+	border: none;
+	padding: 0 0.5rem;
+	margin: 0.25rem;
+	/* border-radius: 3px; */
+	outline: none;
+	color: var(--themeGray0);
+	font-family: 'LCD Solid';
+  font-size: 100%;
+}
+
+#messages {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+#messages > li {
+	padding: 0.5rem 1rem;
+	/* These are technically the same, but use both */
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+
+  -ms-word-break: break-all;
+  /* This is the dangerous one in WebKit, as it breaks things wherever */
+  word-break: break-all;
+  /* Instead use this non-standard one: */
+  word-break: break-word;
+
+  /* Adds a hyphen where the word breaks, if supported (No Blink) */
+  -ms-hyphens: auto;
+  -moz-hyphens: auto;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+}
+
+#messages > li:nth-child(odd) {
+	background: var(--themeGray2);
+}
+#endRoundScores > li:nth-child(odd) {
+	background: var(--themeGray2);
+}
+.flexBox {
+	display: flex;
+	width: 100vw;
+	height: 80vh;
+}
+
+#players {
+	list-style-type: none;
+	margin: 0px;
+	padding: 0px;
+	padding-inline-start: 0px;
+}
+#playersContainer{
+	margin-left:3%;
+	text-align: center;
+	/* border: 5px solid red; */
+	width: 15%;
+	/*max-width: 130px;*/
+	background: var(--themeGray4);
+	height: fit-content;
+  min-height: 60%;
+	position: relative;
+}
+.username {
+	position: relative;
+	padding-top: 5px;
+	font-size:18px;
+	/* These are technically the same, but use both */
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+
+  -ms-word-break: break-all;
+  /* This is the dangerous one in WebKit, as it breaks things wherever */
+  word-break: break-all;
+  /* Instead use this non-standard one: */
+  word-break: break-word;
+
+  /* Adds a hyphen where the word breaks, if supported (No Blink) */
+  -ms-hyphens: auto;
+  -moz-hyphens: auto;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+}
+
+.userscore{
+	padding-right: 1em;
+  padding-bottom: 5px;
+	text-align: right;
+}
+
+.number-input {
+  padding: 5px;
+  /* border-radius: 5px; */
+  border: none;
+}
+
+.playerLocater {
+	position: absolute;
+	/* float: left; */
+	left: -22px;
+  top: 2px;
+	width: 40px;
+}
+#players > li:nth-child(odd) {
+  background: var(--themeGray2);
+}
+.crown {
+	position: absolute;
+	/* float: left; */
+	left: 0px;
+	width:45px;
+	top:5px;
+}
+#controls {
+	position: relative;
+	/* border: 5px solid red; */
+	height: 100%;
+	/* background-color: var(--themeGray0); */
+}
+
+#info {
+	position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+	opacity: .85;
+  color: white;
+  background-color: var(--themeGray0);
+  padding: 20px;
+  line-height: 200%;
+  text-align: center;
+}
+
+.yellow {
+  color: var(--themeYellow);
+}
+
+#copyLinkButton {
+	background: none;
+	border: none;
+	padding: 10px!important;
+	/* font-family: arial, sans-serif; */
+	color: var(--themeYellow);
+	text-decoration: underline;
+	cursor: pointer;
+	font-family: 'LCD Solid';
+	font-size: 16px;
+	-webkit-transition-duration: 0.3s; /* Safari */
+  transition-duration: 0.3s;
+}
+
+#copyLinkButton:hover {
+  color: var(--themeGreen);
+}
+
+#copyLinkButton:active {
+  outline: 0;
+  border: none;
+  -moz-outline-style: none;
+  color: white;
+}
+
+#copyLinkButton:focus {
+  outline: 0;
+  border: none;
+  -moz-outline-style: none;
+}
+
+/* save link after click button */
+/* #copyLinkButton:after {
+}
+
+#copyLinkButton:active:after {
+  transition: 0s;
+} */
+
+canvas {
+}
+
+.defultButton{
+	background: var(--themeYellow);
+	border: none;
+	padding: 10px 10px 10px 10px;
+	/* margin: 0.25rem; */
+	/* border-radius: 3px; */
+	outline: none;
+	color: var(--themeGray0);
+	font-family: 'LCD Solid';
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: var(--themeGreen);
+  color: white;
+}
+
+.defultButton:disabled:hover {
+  cursor: not-allowed;
+  background: var(--themeGray2);
+	color: var(--themeGray0);
+}
+
+/* general block styles  */
+
+.blockMainHeader {
+  background-color: var(--themeGray0);
+  top: 0px;
+  padding: 40px;
+  z-index: 10;
+  position: relative;
+}
+
+.blockHeader {
+  padding: 10px;
+	text-align: center;
+  background-color: var(--themeGray0);
+  color: white;
+}
+
+.blockFooter {
+  background-color: var(--themeGray0);
+  color: white;
+  margin-bottom: 15px;
+}
+
+
+
+#wordToGuess {
+	padding: 10px;
+	text-align: center;
+  background-color: var(--themeGray0);
+  color: var(--themeYellow);
+	min-height: 1em;
+}
+#chatContainer {
+	/* border: 5px solid red; */
+	width: calc(30% - 20px);
+	height: 95%;
+	position: relative;
+	background-color: var(--themeGray4);
+	
+	margin-right:3%;
+	word-wrap: break-word;
+}
+#adminControls {
+  padding: 20px;
+  text-align: center;
+	display: none;
+}
+#messagesContainer {
+	overflow: scroll;
+	height: 92%;
+}
+#messagesContainer::-webkit-scrollbar {
+	display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+body {
+	-ms-overflow-style: none;
+	/* IE and Edge */
+	scrollbar-width: none;
+	/* Firefox */
+}
+#Gui{
+	position: absolute;
+	/*width:100%;*/
+}
+#GuiTime {
+	position: absolute;
+  color: white;
+	top: 10px;
+	left: 10px;
+}
+#GuiRounds {
+	right: 10px;
+  color: white;
+	top:10px;
+  position: absolute;
+}
+#roundOver {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width:100%;
+	height:100%;
+	display: none;
+	z-index: 60;
+	background-color: #808080;
+	opacity: .8;
+	justify-content: center;
+  align-items: center;
+}
+#nextRound {
+	display: none;
+}
+#endBox {
+	width:40%;
+}
+#endRoundScores {
+	text-align: center;
+	/* border: 5px solid red; */
+	
+	border-bottom-width: 0;
+	margin: 0px;
+	padding: 0px;
+	list-style-type: none;
+	height: 60%;
+}
+
+#nextRound, .buttonStyle{
+  background-color: rgb(255, 255, 255);
+  color: black;
+  padding: 14px 20px;
+  margin: 8px 0;
+  /* border-radius: 4px; */
+  cursor: pointer;
+	font-family: 'LCD Solid';
+	font-weight: normal;
+	font-style: normal;
+	font-size:18px;
+	text-align: center;
+  border: 0;
+	/* border: 2px solid var(--themeYellow); */
+}
+#nextRound{
+		width: 100%;
+}
+
+#nextRound, .buttonStyle {
+  transition-duration: 0.4s;
+}
+
+#nextRound:hover, .buttonStyle {
+  background-color: var(--themeYellow);
+  color: white;
+}
+
+#newGame {
+  margin-top: 10px;
+}
+
+.playersFooter {
+/* margin: auto; */
+	text-align: center;
+	/* padding: 10px; */
+	/*opacity: .9;*/
+	position: absolute;
+	bottom: 0px;
+	width: 100%;
+	transform: translateY(100%);
+}
+
+#roomInfo{
+	background-color: var(--themeGray0);
+}
+
+#about {
+  position: relative;  
+  z-index: 20;
+	margin: auto;
+  margin-top: -60px;
+  margin-bottom: 20px;
+	text-align: center;
+	/*opacity: .9;*/
+	max-width: 400px;
+	text-decoration: none;
+	display: block;
+  transition: all 0.3s ease;
+}
+
+#about:hover {
+  transform: scale(1.1);
+}
+
+#roundsLabel {
+	/* font-family:'agent-orange.regular'; */
+	/* font-size: 18px; */
+}
+#endWord{
+	text-align: center;
+}
+#canvasContainer{
+	touch-action: none;
+}
+#saveBuild{
+  margin-top: 10px;
+	width: 100%;
+}
+
+#showControls{
+  margin-top: 10px;
+	width: 100%;
+}
+
+.winner{
+	color: var(--themeGreen);
+}
+.extraSpaces {
+  width: 5%;
+}
+#shareUrl {
+	display: none;
+}
+button:disabled,
+button[disabled]{
+  background-color: #cccccc;
+}
+
+button:disabled:hover,
+button[disabled][hover]{
+  background-color: #cccccc;
+}
+
+.custom-radios {
+	display: flex;
+	width: 100%;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+  padding-top: 15px;
+}
+.custom-radios div {
+  display: inline-block;
+}
+.custom-radios input[type=radio] {
+  display: none;
+}
+.custom-radios input[type=radio] + label {
+  color: #333;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+}
+.custom-radios input[type=radio] + label span {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  vertical-align: middle;
+  cursor: pointer;
+  /*border-radius: 50%;*/
+  /* border: 2px solid #FFFFFF; */
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.33);
+  background-repeat: no-repeat;
+  background-position: center;
+  text-align: center;
+  line-height: 44px;
+}
+.custom-radios input[type=radio] + label span img {
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+.custom-radios input[type=radio]#color-1 + label span {
+  background-color: #ffae23;
+}
+.custom-radios input[type=radio]#color-2 + label span {
+  background-color: #3498db;
+}
+.custom-radios input[type=radio]#color-3 + label span {
+  background-color: #00CC00;
+}
+.custom-radios input[type=radio]#color-4 + label span {
+  background-color: #ff0000;
+}
+.custom-radios input[type=radio]#color-5 + label span {
+  background-color: #0a0a0a;
+}
+.custom-radios input[type=radio]#color-6 + label span {
+  background-color: #ffffff;
+}
+.custom-radios input[type=radio]#color-6 + label span img {
+	filter: invert(1);
+}
+.custom-radios input[type=radio]#color-7 + label span {
+  background-color: #A300BA;
+}
+.custom-radios input[type=radio]#color-8 + label span {
+  background-color: #231FD3;
+}
+.custom-radios input[type=radio]#color-9 + label span {
+  background-color: #FF7100;
+}
+.custom-radios input[type=radio]#color-10 + label span {
+  background-color: #4C4C4C;
+}
+.custom-radios input[type=radio]#color-11 + label span {
+  background-color: #A0522D;
+}
+.custom-radios input[type=radio]#color-12 + label span {
+  background-color: #ff66cc;
+}
+.custom-radios input[type=radio]#color-13 + label span {
+  background-color: #602F0C;
+}
+.custom-radios input[type=radio]#color-14 + label span {
+  background-color: #0C0662;
+}
+.custom-radios input[type=radio]#color-15 + label span {
+  background-color: #C1C1C1;
+}
+.custom-radios input[type=radio]#color-16 + label span {
+  background-color: #C13500;
+}
+.custom-radios input[type=radio]:checked + label span img {
+  opacity: 1;
+}
+
+
+#roomInfo{
+	padding: 10px 0px 0px 0px;
+	overflow: hidden;
+}
+
+#delSw{
+	position: absolute;
+	right:65px;
+	display: none;
+}
+.switch {
+  position: absolute;
+	right: 0;
+  width: 60px;
+  height: 34px;
+	display: none;
+}
+
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .1s;
+  transition: .1s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .1s;
+  transition: .1s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+div#controls {
+	width: 55%;
+}
+#adminControls{
+		padding: 5px;
+	}
+@media screen and (max-width: 600px) {
+	body{
+		background-size: 100px;
+	}
+  #about {
+    font-size: 4vw;
+    width: 50%;
+    margin-bottom: 2px;
+    margin-top: -50px;
+	}
+	.blockMainHeader{
+		padding: 4.5vw;
+	}
+	.custom-radios input[type=radio] + label span{
+		height: 22px;
+    width: 22px;
+    line-height: 23px;
+	}
+
+	#roomInfo{
+	  padding: 10px 0px 0px 0px;
+		overflow: hidden;
+	}
+	#form > button{
+		padding: 0px;
+		margin: 0px;
+    font-family: 'LCD Solid';
+    color: var(--themeYellow);
+    opacity:rgba(0,0,0,0.0);
+	}
+	#input{
+		margin: 0px;
+		border-radius: 0px;
+		border: black;
+		border-style: solid;
+		padding:0;
+	}
+	#form{
+		padding: 0px;
+	}
+
+  .blockHeader {
+    font-size: 8pt;
+  }
+
+	.username{
+		font-size: 3vw;
+	}
+	.userscore{
+		font-size: 3vw;
+	}
+	#chatContainer {
+    /* border: 2px solid red; */
+		border-left-width: 0px;
+	}
+	
+	#playersContainer {
+		/* border: 2px solid red; */
+		border-right-width: 0px;
+		position: relative;
+	}
+	#endBox{
+		width: 80%;
+	}
+	.switch{
+		display: inline-block;
+	}
+	#delSw{
+		display: initial;
+	}
+	#Gui{
+		display: none;
+	}
+	.extraSpaces {
+		width: 0;
+	}
+	.defultButton{
+		font-size: 2vw;
+	}
+	
+}

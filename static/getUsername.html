@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Buildonary.Live</title>
+    <link href="../../homestyle.css" rel="stylesheet" type="text/css" />
+		<link rel="icon" href="../../cubes.ico" type="image/icon type">
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-G0R4JBQ5NT"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+
+			gtag('config', 'G-G0R4JBQ5NT');
+		</script>
+  </head>
+  <body>
+		<div class="blockMainHeader"></div>
+		<a style="text-decoration: none;" href="../../">
+			<img id="about" src="../../logo.png" alt="Buildonary.Live">
+		</a>
+		<div id="formContainer" style="margin-top:60px;">
+			<form id="info">
+				<label for="uname">Username:</label>
+				<input type="text" id="uname" name="uname"><br>
+			
+				<button id="addCode" onclick="joinRoom()">Join Room </button>
+				
+			</form>
+		</div>
+    <script>
+			var pathname = window.location.pathname.split("/")[2];
+			var button = document.getElementById("addCode");
+			button.innerHTML += pathname;
+			document.getElementById("info").onsubmit = function () {
+				return false;
+			};
+
+			function joinRoom(){
+				const form = document.querySelector('form');
+				const data = Object.fromEntries(new FormData(form).entries());
+				if(data.uname == ""){
+					location.href = "/room/"+pathname;
+				}else{
+					location.href = "/room/"+pathname+"?username="+data.uname;
+				}
+				
+			}
+		</script>
+  </body>
+</html>

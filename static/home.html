@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+		<meta name="description" content="Buildonary.Live, 3D Voxel Pictionary for the Web">
+		<meta name="keywords" content="Buildonary, Buildonary.live, pictonary, Io, 3Dgames, Skribbl.io">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buildonary.Live</title>
+    <link href="homestyle.css" rel="stylesheet" type="text/css" />
+		<link rel="icon" href="cubes.ico" type="image/icon type">
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-G0R4JBQ5NT"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+
+			gtag('config', 'G-G0R4JBQ5NT');
+		</script>
+		<script data-ad-client="ca-pub-2742836903568102" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  </head>
+  <body>
+		<!-- <iframe style="position: fixed;z-index:90; bottom: 40px; left: 20px; visibility: visible;" id="IOG_CP" scrolling="no" frameborder="0" width="220" height="125" src="https://viral.iogames.space"></iframe> -->
+		<div class="blockMainHeader"></div>
+		<a style="text-decoration: none;" href="">
+			<img id="about" src="logo.png" alt="Buildonary.Live">
+		</a>
+		<div id="bodyFlexContiner">
+			<div id="leftContainer">
+			</div>
+			<div id="centerConatiner">
+				<div id="formContainer">
+					<form id="info">
+						<div class="blockHeader">
+							<label for="uname">Username:</label>
+							<input type="text" id="uname" name="uname"><br>
+						</div>
+						<button onclick="joinPublic()">Join the Public Room</button><br>
+						<button onclick="newRoom()">Create a new private room</button><br>
+						<button onclick="joinRoom()">Join existing private room</button><br>
+						<div class="blockFooter">
+							<label for="rcode">Room Code:</label>
+						<input type="text" id="rcode" name="rcode">
+						</div>
+					</form>
+				</div>
+				<div class="aboutTheGame">
+					
+					<h2>Join the Discord server <a href = "https://discord.gg/ZcjxMS2Cu3">https://discord.gg/ZcjxMS2Cu3</a></h2>
+				</div>
+				<div class="aboutTheGame">
+					<div class="blockBody">
+						<h1>How To Play</h1>
+					</div>
+					<h2>Controls:</h2>
+					<p>When building with a mouse, use these controls:</p>
+
+					<p>Left Click: Add Voxel<br>
+					Shift + Left Click: Remove Voxel<br>
+					Right Click: Orbit the Camera <br>
+					Shift + Right Click: Pan the Camera<br>
+					Scroll Wheel: Zoom In/Out</p>
+
+					<p>When building on a touchscreen, use 1 finger to place and 2 fingers to move the camera.</p>
+				</div>
+				<div class="aboutTheGame">
+					<div class="blockBody">
+						<h1>About</h1>
+					</div>
+					<p>
+					Buildonary.live is voxel-based pictionary game on the web. The game plays like Skribbl.io but with a 3D twist. You and your friends play rounds alternating between creating 3D art to a prompt (which is located at the top of the screen), and trying to guess what the other players are creating. If you want to play with strangers, just click the join a public room button. If you make something cool make sure to click the save image as PNG button and share it in the offical discord.</p>
+				</div>
+				
+				<div class="aboutTheGame">
+					<div class="blockBody">
+						<h1>Credits</h1>
+					</div>
+					Created by Theo<br>
+					Send suggestions (and compliments) to <a href = "mailto: Theomhalpern@gmail.com">Theomhalpern@gmail.com</a><br>
+					Additional Developent by<br>Iron and Spiralio<br>
+					Copyright (c) 2021 Theo
+				</div>
+				<div id="small">Voxel painter built off of <a href="https://threejs.org/examples/#webgl_interactive_voxelpainter" title="three js examples">three.js interactive voxelpainter<br></a>some icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+			</div>
+			<div id="rightContiner">
+				<div class="aboutTheGame" style="margin-top:0px;">
+					<div class="blockBody">
+						<h1>News</h1>
+					</div>
+					<p class="date">V.1.6.1 Mar 9, 2021</p>
+					<p class="newsText">-This Game (and many other Fun IO games) are now featured on <a href="https://iogames.space/">iogames.space</a></p>
+					<p class="date">V.1.6 Mar 8, 2021</p>
+					<p class="newsText">-News Added <br>-About Added <br>-Updated Wordlist<br>-Known Bugs: Invisible Block</p>
+					<p class="date">V.1.5 Mar 5, 2021</p>
+					<p class="newsText">-Fixed a kick bug <br>-Block Footer Styling</p>
+					<p class="date">V.1.4 Mar 4, 2021</p>
+					<p class="newsText">-Added inactivity kick</p>
+					<p class="date">V.1.3  Mar 3, 2021</p>
+					<p class="newsText">-Style refresh, <br>Thanks to Iron and Spiralio </p>
+					<p class="date">V.1.1.1 Feb 27, 2021</p>
+					<p class="newsText">-Added ReadMe<br>-Updated Meta Tags<br>-Fixed Bugs</p>
+					<p class="date">V.1.2 Feb 26, 2021</p>
+					<p class="newsText">-Added Mobile/Touch Support<br>-Added Save Image Button</p>
+					<p class="date">V.1.1 Feb 25, 2021</p>
+					<p class="newsText">-Added a hint letter after 50 seconds<br>-Fixed Bugs</p>		
+					<p class="date">V.1 Feb 20, 2021</p>
+					<p class="newsText">-Left Beta!!!!<br>-No more messing with Url!!!!</p>
+					<p class="date">V.0.2 Feb 19, 2021</p>
+					<p class="newsText">-First Playable update</p>
+					<p class="date">V.0.1 Feb 18, 2021</p>
+					<p class="newsText">-Brought three.js and Socket.io together</p>
+				</div>
+			</div>
+		</div>
+    <script>
+			document.getElementById("info").onsubmit = function () {
+				return false;
+			};
+			function newRoom(){
+				const form = document.querySelector('form');
+				const data = Object.fromEntries(new FormData(form).entries());
+				location.href = "/newRoom/"+data.uname;
+			}
+
+			function joinRoom(){
+				const form = document.querySelector('form');
+				const data = Object.fromEntries(new FormData(form).entries());
+				if(data.uname !== ""){
+					location.href = "/room/"+data.rcode+"?username="+data.uname;
+				}else{
+					location.href = "/room/"+data.rcode;
+				}
+				
+			}
+			function joinPublic(){
+				const form = document.querySelector('form');
+				const data = Object.fromEntries(new FormData(form).entries());
+				if(data.uname !== ""){
+					location.href = "/room/public?username="+data.uname;
+				}else{
+					location.href = "/room/public";
+				}
+				
+			}
+		</script>
+  </body>
+</html>

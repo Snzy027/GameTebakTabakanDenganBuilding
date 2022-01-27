@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Buildonary.live</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../../style.css" rel="stylesheet" type="text/css" />
+		<link rel="icon" href="../../cubes.ico" type="image/icon type">
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-G0R4JBQ5NT"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+
+			gtag('config', 'G-G0R4JBQ5NT');
+		</script>
+  </head>
+  <body>
+    <div class="blockMainHeader"></div>
+		<a style="text-decoration: none;" href="../../">
+			<img id="about" src="../../logo.png" alt="Buildonary.Live">
+		</a>
+		<div class="flexBox">
+			<div id="playersContainer">
+        <div class="blockHeader">
+          Players
+        </div>
+				<ul id="players">
+				</ul>
+        <div class="blockFooter">
+          <div class="playersFooter">
+            <div id="roomInfo"></div>
+
+            <button id="showControls" class="defultButton">Controls</button><a id="link"></a>
+            <button id="saveBuild" class="defultButton">Save Build As PNG</button>
+          </div>
+          
+            
+        </div>
+			</div>
+			<div class="extraSpaces"></div>
+			<div id="controls">
+				<div id="roundOver">
+					<div id="endBox">
+						<h2 id="endWord"></h2>
+						<ul id="endRoundScores"></ul>
+						<button id="nextRound">Next Player</button>
+					</div>
+				</div>
+				<div id="wordToGuess"><br>
+				</div>
+				<div id="GuiTime">
+				</div>
+				<div id="GuiRounds">
+				</div>
+				
+				<div id="Gui">
+					
+				</div>
+				<div id="info" style="display: block;">
+					
+					<strong><span class="yellow">Left Click</span></strong>: Add Voxel
+          <br><strong><span class="yellow">Shift + Left Click</span></strong>: Remove Voxel
+					<br><strong><span class="yellow">Right Click</span></strong>: Orbit the Camera 
+          <br><strong><span class="yellow">Shift + Right Click</span></strong>: Pan the Camera
+					<br><strong><span class="yellow">Scroll Wheel</span></strong>: Zoom In/Out
+					
+				</div>
+				<div id="delSw">Deleting:</div>
+				<label class="switch">
+					
+					<input id="checkBoxDelete" type="checkbox">
+					<span class="slider"></span>
+				</label>
+				
+				<!-- canvas will go here -->
+				<div id="canvasContainer">
+				</div>
+        <div class="blockFooter">
+          <div class="custom-radios">
+					<div>
+						<input type="radio" id="color-1" name="color" value="color-1" checked>
+						<label for="color-1">
+							<span>
+								<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/242518/check-icn.svg" alt="Checked Icon" />
+							</span>
+						</label>
+					</div>
+					
+					<div>
+						<input type="radio" id="color-2" name="color" value="color-2">
+						<label for="color-2">
+							<span>
+								<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/242518/check-icn.svg" alt="Checked Icon" />
+							</span>
+						</label>
+					</div>
+					
+					<div>
+						<input type="radio" id="color-3" name="color" value="color-3">
+						<label for="color-3">
+							<span>
+								<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/242518/check-icn.svg" alt="Checked Icon" />
+							</span>
+						</label>
+					</div>
+
+					<div>
+						<input type="radio" id="color-4" name="color" value="color-4">
+						<label for="color-4">
+							<span>
+								<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/242518/check-icn.svg" alt="Checked Icon" />
+							</span>
+						</label>
+					</div>
+					<div>
+						<input type="radio" id="color-5" name="color" value="color-5">
+						<label for="color-5">
+							<span>
+								<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/242518/check-icn.svg" alt="Checked Icon" />
+							</span>
+						</label>
+					</div>
+					<!-- code to copy to add colors-->
+					<div>
+						<input type="radio" id="color-6" name="color" value="color-6">
+						<label for="color-6">
+							<span>
+								<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/242518/check-icn.svg" alt="Checked Icon" />
+							</span>
+						</label>
+					</div>
+
+
+					<div>
+						<input type="radio" id="color-7" name="color" value="color-7">
+						<label for="color-7">
+							<span>
+								<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/242518/check-icn.svg" alt="Checked Icon" />
+							</span>
+						</label>
+					</div>
+
+					<div>
+						<input type="radio" id="color-8" name="color" value="color-8">
+						<label for="color-8">
+							<span>
+								<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/242518/check-icn.svg" alt="Checked Icon" />
+							</span>
+						</label>
+					</div>
+
+					<div>
+						<input type="radio" id="color-9" name="color" value="color-9">
+						<label for="color-9">
+							<span>
+								<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/242518/check-icn.svg" alt="Checked Icon" />
+							</span>
+						</label>
+					</div>
+
+					<div>
+						<input type="radio" id="color-10" name="color" value="color-10">
+						<label for="color-10">
+							<span>
+								<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/242518/check-icn.svg" alt="Checked Icon" />
+							</span>
+						</label>
+					</div>
+
+					<div>
+						<input type="radio" id="color-11" name="color" value="color-11">
+						<label for="color-11">
+							<span>
+								<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/242518/check-icn.svg" alt="Checked Icon" />
+							</span>
+						</label>
+					</div>
+
+					<div>
+						<input type="radio" id="color-12" name="color" value="color-12">
+						<label for="color-12">
+							<span>
+								<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/242518/check-icn.svg" alt="Checked Icon" />
+							</span>
+						</label>
+					</div>
+					<div>
+						<input type="radio" id="color-13" name="color" value="color-13">
+						<label for="color-13">
+							<span>
+								<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/242518/check-icn.svg" alt="Checked Icon" />
+							</span>
+						</label>
+					</div>
+
+					<div>
+						<input type="radio" id="color-14" name="color" value="color-14">
+						<label for="color-14">
+							<span>
+								<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/242518/check-icn.svg" alt="Checked Icon" />
+							</span>
+						</label>
+					</div>
+
+					<div>
+						<input type="radio" id="color-15" name="color" value="color-15">
+						<label for="color-15">
+							<span>
+								<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/242518/check-icn.svg" alt="Checked Icon" />
+							</span>
+						</label>
+					</div>
+
+					<div>
+						<input type="radio" id="color-16" name="color" value="color-16">
+						<label for="color-16">
+							<span>
+								<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/242518/check-icn.svg" alt="Checked Icon" />
+							</span>
+						</label>
+					</div>
+				  </div>
+					<br>
+          <div id="adminControls">
+						<label for="rounds" id="roundsLabel" >Rounds:</label>
+						<input type="number" id="rounds" name="rounds" class="number-input" min="1" max="5" value="1">
+						<label for="time" id="timeLabel" >Time to Build (s):</label>
+						<input type="number" id="time" name="time" class="number-input" min="50" max="300" value="120">
+						<br><button id="newGame" class="defultButton">Start Game</button>
+						<br>
+					</div>
+					
+					
+					
+
+        </div>
+				
+			</div>	
+			<div class="extraSpaces"></div>
+			<div id="chatContainer">
+        <div class="blockHeader">
+          Chat
+        </div>
+				<div id="messagesContainer">
+					<ul id="messages"></ul>
+				</div>
+				<form id="form" action="">
+					<input id="input" autocomplete="off" placeholder="Guess.." /><button>Send</button>
+				</form>
+			</div>
+			
+		</div>
+		
+		
+
+		<script src="/socket.io/socket.io.js"></script>
+		<script src="../../game.js" type="module"></script>
+		
+  </body>
+</html>
